@@ -1,8 +1,23 @@
-name = "admin-dashboard"
+name = "webcraft-admin-dashboard"
+main = ".open-next/worker.js"
 compatibility_date = "2024-01-01"
 
+[[d1_databases]]
+binding = "DB"
+database_name = "admin-dashboard-db"
+database_id = "b34efe44-2975-4d4c-bbba-e7abdf12c5f6"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "admin-dashboard-storage"
+
+[vars]
+CLOUDFLARE_ACCOUNT_ID = "d1e85aae55595aca1129bc334543248a"
+CLOUDFLARE_DATABASE_ID = "b34efe44-2975-4d4c-bbba-e7abdf12c5f6"
+CLOUDFLARE_R2_BUCKET_NAME = "admin-dashboard-storage"
+
 [env.production]
-name = "admin-dashboard-prod"
+name = "webcraft-admin-dashboard-prod"
 
 [[env.production.d1_databases]]
 binding = "DB"
