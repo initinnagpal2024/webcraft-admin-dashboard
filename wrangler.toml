@@ -1,0 +1,19 @@
+name = "admin-dashboard"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "admin-dashboard-prod"
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "admin-dashboard-db"
+database_id = "b34efe44-2975-4d4c-bbba-e7abdf12c5f6"
+
+[[env.production.r2_buckets]]
+binding = "BUCKET"
+bucket_name = "admin-dashboard-storage"
+
+[env.production.vars]
+CLOUDFLARE_ACCOUNT_ID = "d1e85aae55595aca1129bc334543248a"
+CLOUDFLARE_DATABASE_ID = "b34efe44-2975-4d4c-bbba-e7abdf12c5f6"
+CLOUDFLARE_R2_BUCKET_NAME = "admin-dashboard-storage"
